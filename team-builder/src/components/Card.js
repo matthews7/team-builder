@@ -6,14 +6,14 @@ export default function Card (props){
 
 
     return(
-        <div>
+        <div className="card">
             {props.teamMember.map(mem => (
-                <div>
-                    <h1>{mem.name} </h1>
+                <div key={mem.id} >
+                    <h2>{mem.name} </h2>
                     <p> {mem.email}</p>
                     <p>{mem.role}</p>
                 </div>
-            ))}
+            ))};
             
         </div>
     )
