@@ -9,7 +9,7 @@ function App() {
     id: 1, 
     name: "TeamMember",
     email: "team@gmail.com",
-    role: "I like butter"
+    role: "Honey Butter Lover"
     }
   
   ]);
@@ -22,15 +22,15 @@ function App() {
       email: member.email,
       role: member.role
     };
-    setTeamMember([...teamMember, newMember])
+    setTeamMember([...teamMember, newMember]);
   };
 
 
   return (
     <div className="App">
-      <h1>Team List</h1>
-      <Form addTeamMember={addTeamMember}/>
-      <Card  teamMember={teamMember}/>
+      <h1 className="header">Team List</h1>
+      <Form  addTeamMember={addTeamMember}/>
+      <Card teamMember={teamMember}/>
      
     </div>
   );

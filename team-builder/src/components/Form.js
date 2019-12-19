@@ -11,21 +11,23 @@ export default function Form (props){
 
     });
 
-    const handleChanges = e =>
+    const handleChanges = e =>{
         setMember({
             ...member, 
             [e.target.name] : e.target.value
         });
+        // console.log(e.target.value)
+    };
 
     const submitForm = e =>{
         e.preventDefault();
-        // props.addTeamMember(member);
+        props.addTeamMember(member);
         setMember({name: "", email: "", role: ""});
-    }
+    };
 
     return(
         <div>
-            <form onSubmit={submitForm}>
+            <form className="form" onSubmit={submitForm}>
                 <label> Name:
                     <input
                     id="name" 
@@ -33,7 +35,7 @@ export default function Form (props){
                     placeholder="Name"
                     onChange={handleChanges}
                     name="name"
-                    // value=
+                    value={member.name}
                     />
                 </label>
 
@@ -44,7 +46,7 @@ export default function Form (props){
                     placeholder="Email"
                     onChange={handleChanges}
                     name="email"
-                    // value=
+                    value={member.email}
                     />
                 </label>
 
@@ -55,7 +57,7 @@ export default function Form (props){
                     placeholder="Role"
                     onChange={handleChanges}
                     name="role"
-                    // value=
+                    value={member.role}
                     />
                 </label>
 

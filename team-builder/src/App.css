@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Kavoon&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card{
+  display:flex;
+  justify-content: space-around;
+  flex-flow: wrap row;
+  background: #000000;
+  border-radius: 10px;
+  border: 2px solid black;
+  color: #f0f;
+  width: 70%;
+  margin: 5% auto;
+  box-shadow: 10px 10px 5px #f0f;
+  font-family: 'Kavoon', cursive;
+
+}
+
+.header {
+  font-family: 'Kavoon', cursive;
+  background: black;
+  color: #ff00ff;
+}
+
+.flex{
+  margin-left: 1%;
+}
+
+.form label {
+  margin-left: 1%;
 }
